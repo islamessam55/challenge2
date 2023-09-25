@@ -1,0 +1,110 @@
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.column{
+    width: 50%;
+    position: relative;
+    left: 29%;
+    top: 25%;
+    transform: translate(-50px, -50px);
+}
+.column .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column .container .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box .one{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 20px;
+}
+.box img{
+    width: 60px;
+    margin-top: 30px;
+}
+.box h1{
+    color: var(--Very-light-gray);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.box p{
+    color: var(--Transparent-white-paragraphs);
+    font-size: 12px;
+    margin-bottom: 60px;
+}
+.box button{
+    background-color: var(--Very-light-gray);
+    border: none;
+    padding: 15px 25px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.box button:hover{
+    color: white;
+    border: 2px solid white;
+}
+.one button:hover{
+    background-color: var(--Bright-orange);
+}
+.two button:hover{
+    background-color: var(--Dark-cyan);
+}
+.three button:hover{
+    background-color: var(--Very-dark-cyan);
+}
+.box .two{
+    background-color: var(--Dark-cyan);
+    padding: 20px;
+}
+.box .three{
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+}
+.one button{
+    color: var(--Bright-orange);
+}
+.two button{
+    color: var(--Dark-cyan);
+}
+.three button{
+    color: var(--Very-dark-cyan);
+}
+@media (max-width: 992px){
+    .column{
+        width: 100%;
+    }
+    .column .container{
+        flex-direction: column;
+    }
+    .column .container .box{
+        flex-direction: column;
+    }
+    .box .one{
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    .box .three{
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}
